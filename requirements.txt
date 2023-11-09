@@ -38,5 +38,4 @@ urllib3==1.26.13
 uuid==1.30
 uvicorn==0.20.0
 values==2020.12.3
-websockets==11.0.3
 yarl==1.9.2
