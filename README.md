@@ -15,7 +15,6 @@ The software stack for implementing the task is as follows:
 - Aiohttp
 
 Statement of the problem (Technical specifications for programming)
-
 - It is required to implement a REST API using the FastAPI framework running in asynchronous mode. 
 - The API must contain a single endpoint that processes a POST request containing two parameters passed in the form: UUID (RFC 4122), email address.
 - When processing a request, a data check must be carried out; if the parameters are valid, the data is added to the PostgreSQL database.
@@ -39,7 +38,7 @@ User service is possible using:
 
 List of programs:
 - u.py  main program
-- uu.py load testing program, the program specifies the following conditions:
+- ut.py load testing program, the program specifies the following conditions:
   - number of simultaneously executed tasks,
   - number of POST transactions in each task,
   - email address prefix.
