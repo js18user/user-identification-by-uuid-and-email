@@ -43,6 +43,7 @@ List of programs:
   - number of POST transactions in each task,
   - email address prefix.
 - create_table.sql  .SQL file for creating a table in the database.
+- requirements.txt  no comment
 
 The present task is self-documented:
 - http://127.0.0.1:8000/docs
