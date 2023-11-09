@@ -42,7 +42,7 @@ List of programs:
   - number of simultaneously executed tasks,
   - number of POST transactions in each task,
   - email address prefix.
-- create_table.sql  .SQL file for creating a table in the database.
+- create.sql  .SQL file for creating a table in the database.
 - requirements.txt  no comment
 
 The present task is self-documented:
