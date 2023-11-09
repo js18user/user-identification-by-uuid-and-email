@@ -140,6 +140,18 @@ try:
         port=5432))
 
 
+    async def db_connection():
+    """  Reserved for future  """
+
+        connect = configure_asyncpg(app, 'postgresql://{user}:{password}@{host}:{port}/{name}'.format(
+            user=os.environ['DB_USER'],
+            password=os.environ['DB_PASSWORD'],
+            host=os.environ['DB_HOST'],
+            port=os.environ['DB_PORT'],
+            name=os.environ['DB_NAME']))
+        return connect
+
+
     @conn.on_init
     async def init(db_initial):
         with open('create.sql', 'r') as sql:
