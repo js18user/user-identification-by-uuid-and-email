@@ -16,13 +16,13 @@ The software stack for implementing the task is as follows:
 
 Statement of the problem (Technical specifications for programming)
 
-It is required to implement a REST API using the FastAPI framework running in asynchronous mode. 
-The API must contain a single endpoint that processes a POST request containing two parameters passed in the form: UUID (RFC 4122), email address.
-When processing a request, a data check must be carried out; if the parameters are valid, the data is added to the PostgreSQL database.
-The response to the request must be in JSON format containing the database entry ID, UUID and email address.
-Database access parameters and table name are configured in the .env file. 
-You will also need to create a database table suitable for this task (the database will be provided later).
-It is also necessary to implement a Python script that will allow you to perform load testing of a given endpoint while simultaneously generating N requests to the endpoint.
+- It is required to implement a REST API using the FastAPI framework running in asynchronous mode. 
+- The API must contain a single endpoint that processes a POST request containing two parameters passed in the form: UUID (RFC 4122), email address.
+- When processing a request, a data check must be carried out; if the parameters are valid, the data is added to the PostgreSQL database.
+- The response to the request must be in JSON format containing the database entry ID, UUID and email address.
+- Database access parameters and table name are configured in the .env file. 
+- You will also need to create a database table suitable for this task (the database will be provided later).
+- It is also necessary to implement a Python script that will allow you to perform load testing of a given endpoint while simultaneously generating N requests to the endpoint.
 
 This program implements the maintenance of a database of simple counts:
 - ID
