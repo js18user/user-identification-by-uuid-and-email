@@ -45,6 +45,11 @@ List of programs:
 - create.sql  .SQL file for creating a table in the database.
 - requirements.txt  no comment
 
+Return codes:
+- 200 - successful completion of the request
+- 400 - there are errors in the request
+- 422 - Pydantic validate response (very rare)
+
 The present task is self-documented:
 - http://127.0.0.1:8000/docs
 - http://127.0.0.1:8000/redoc
