@@ -2,7 +2,7 @@
 import os
 import uvicorn
 import uuid
-import logging
+from loguru import logger as logging
 import time
 
 from functools import wraps
@@ -65,10 +65,10 @@ async def validator_email(email):
 def lead_time(func_async):
     @wraps(func_async)
     async def wrapper(*args, **kwargs):
-        start_time = time.time()
-        result = await func_async(*args, **kwargs)
+        start_time, result = time.time(), await func_async(*args, **kwargs)
         logging.info(
-            f"{skip}Function {func_async.__name__} execution time: {int((time.time() - start_time)*1000)} m.sec{skip}"
+            f"{skip}Function {func_async.__name__} "
+            f"execution time: {int((time.time() - start_time)*1000)} m.sec{skip}"
         )
         return result
     return wrapper
@@ -126,8 +126,6 @@ try:
         """ To select records into DB"""
         return await db.fetch(await query_select(table, model, ), )
 
-
-    logging.basicConfig(level=logging.INFO, format="%(message)s", )
 
     skip: str = '\n'
     app = FastAPI(title="API documentation",
